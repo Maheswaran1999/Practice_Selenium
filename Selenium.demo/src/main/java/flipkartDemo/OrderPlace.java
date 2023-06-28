@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.*;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -73,9 +74,18 @@ public class OrderPlace {
 
 		// close the current window
 		driver.close();
+		
+		Set<Cookie> demo = driver.manage().getCookies();
+		System.out.println("The size of the cookies: " + demo.size());
+
+		for (Cookie value : demo) {
+			System.out.println(value.getName() + " " + value.getValue());
+		}
+	}
+	
 
 		// chnage the control of the window(child to parent )
-		driver.switchTo().defaultContent();
+		//driver.switchTo().defaultContent();
 		/*
 		 * WebElement prizeDropDown = driver.findElement(By .xpath(
 		 * "//*[@id=\'container\']/div/div[3]/div[1]/div[1]/div/div/div/section[2]/div[4]/div[3]/select"
@@ -85,4 +95,3 @@ public class OrderPlace {
 		 */
 
 	}
-}

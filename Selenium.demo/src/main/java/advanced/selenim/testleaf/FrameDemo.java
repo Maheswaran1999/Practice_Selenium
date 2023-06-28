@@ -10,7 +10,7 @@ public class FrameDemo {
 
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.leafground.com/frame.xhtml");
+		driver.get("https://www.leafgrdound.com/frame.xhtml");
 		driver.manage().window().maximize();
 
 		driver.switchTo().frame(0);
@@ -22,6 +22,7 @@ public class FrameDemo {
 
 		driver.switchTo().defaultContent();
 
+		//Find the count of iframe 
 		WebElement countFrame = driver.findElement(By.tagName("iframe"));
 		Dimension size = countFrame.getSize();
 		System.out.println(size);
