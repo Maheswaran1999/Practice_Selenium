@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-28T18:21:45 IST" name="Default suite" finished-at="2023-06-28T18:21:49 IST" duration-ms="3980">
+  <suite started-at="2023-06-29T11:20:06 IST" name="Default suite" finished-at="2023-06-29T11:20:12 IST" duration-ms="5983">
     <groups>
     </groups>
-    <test started-at="2023-06-28T18:21:45 IST" name="Default test" finished-at="2023-06-28T18:21:49 IST" duration-ms="3980">
-      <class name="advanced.selenim.testleaf.CookiesHandling">
-        <test-method is-config="true" signature="driverLoad()[pri:0, instance:advanced.selenim.testleaf.CookiesHandling@76c3e77a]" started-at="2023-06-28T18:21:45 IST" name="driverLoad" finished-at="2023-06-28T18:21:49 IST" duration-ms="3829" status="PASS">
+    <test started-at="2023-06-29T11:20:06 IST" name="Default test" finished-at="2023-06-29T11:20:12 IST" duration-ms="5983">
+      <class name="flipkartDemo.OrderPlace">
+        <test-method is-config="true" signature="loadDriver()[pri:0, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:01 IST" name="loadDriver" finished-at="2023-06-29T11:20:06 IST" duration-ms="4858" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- driverLoad -->
-        <test-method signature="firstCookiesHandling()[pri:1, instance:advanced.selenim.testleaf.CookiesHandling@76c3e77a]" started-at="2023-06-28T18:21:49 IST" name="firstCookiesHandling" finished-at="2023-06-28T18:21:49 IST" duration-ms="108" status="PASS">
+        </test-method> <!-- loadDriver -->
+        <test-method signature="logIn()[pri:1, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:06 IST" name="logIn" finished-at="2023-06-29T11:20:06 IST" duration-ms="173" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- firstCookiesHandling -->
-      </class> <!-- advanced.selenim.testleaf.CookiesHandling -->
+        </test-method> <!-- logIn -->
+        <test-method signature="searchKidToys()[pri:2, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:06 IST" name="searchKidToys" finished-at="2023-06-29T11:20:06 IST" duration-ms="335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchKidToys -->
+        <test-method signature="windowHandle()[pri:3, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:06 IST" name="windowHandle" finished-at="2023-06-29T11:20:09 IST" duration-ms="2900" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- windowHandle -->
+        <test-method signature="addItems()[pri:4, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:09 IST" name="addItems" finished-at="2023-06-29T11:20:10 IST" duration-ms="1020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItems -->
+        <test-method signature="placeOrder()[pri:5, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:10 IST" name="placeOrder" finished-at="2023-06-29T11:20:11 IST" duration-ms="1124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrder -->
+        <test-method signature="enterPhoneNumber()[pri:6, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:11 IST" name="enterPhoneNumber" finished-at="2023-06-29T11:20:12 IST" duration-ms="215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterPhoneNumber -->
+        <test-method signature="continueButton()[pri:7, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:12 IST" name="continueButton" finished-at="2023-06-29T11:20:12 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- continueButton -->
+        <test-method signature="backToHome()[pri:8, instance:flipkartDemo.OrderPlace@bae7dc0]" started-at="2023-06-29T11:20:12 IST" name="backToHome" finished-at="2023-06-29T11:20:12 IST" duration-ms="75" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToHome -->
+      </class> <!-- flipkartDemo.OrderPlace -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

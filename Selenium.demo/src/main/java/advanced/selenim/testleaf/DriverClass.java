@@ -1,6 +1,7 @@
 package advanced.selenim.testleaf;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,10 +13,10 @@ public class DriverClass {
 	
 	public WebDriver driver;
 
-	@BeforeMethod
+	@BeforeSuite
 	public void driverLoad() {
 		driver = new ChromeDriver();
-		driver.get("https://www.leafground.com/input.xhtml;jsessionid=node0ery73s4l1gk218va2101aq5qf148054.node0");
+		driver.get("https://www.flipkart.com/");
 		driver.manage().window().maximize();
 	}
 

@@ -1,11 +1,7 @@
 package advanced.selenim.testleaf;
 
 import java.util.Set;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class CookiesHandling extends DriverClass {
@@ -19,5 +15,18 @@ public class CookiesHandling extends DriverClass {
 		for (Cookie value : demo) {
 			System.out.println(value.getName() + " " + value.getValue());
 		}
+	}
+
+	@Test(priority = 2)
+	public void addCookies() {
+		Cookie add = new Cookie("myCookies", "123456789");
+		driver.manage().addCookie(add);
+	}
+
+	@Test(priority = 3)
+	public void deleteAllCookies() {
+		driver.manage().deleteAllCookies();
+		int finalSize = driver.manage().getCookies().size();
+		System.out.println("Afrer delete all cookies, The size is :" + finalSize);
 	}
 }

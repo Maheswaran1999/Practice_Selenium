@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="flipkartDemo.OpenAndLogin">
+      <class name="flipkartDemo.OrderPlace">
         <methods>
-          <include name="openAndLogin"/>
+          <include name="placeOrder"/>
+          <include name="enterPhoneNumber"/>
+          <include name="logIn"/>
+          <include name="searchKidToys"/>
+          <include name="continueButton"/>
+          <include name="loadDriver"/>
+          <include name="backToHome"/>
+          <include name="windowHandle"/>
+          <include name="addItems"/>
         </methods>
-      </class> <!-- flipkartDemo.OpenAndLogin -->
+      </class> <!-- flipkartDemo.OrderPlace -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

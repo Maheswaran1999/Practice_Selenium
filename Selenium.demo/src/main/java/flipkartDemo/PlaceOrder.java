@@ -1,37 +1,31 @@
 package flipkartDemo;
 
 import java.time.Duration;
+import org.testng.annotations.*;
 import java.util.*;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
-public class OrderPlace {
-	public static void main(String[] args) throws InterruptedException {
-		// Open flipkart
-		long startTime = System.currentTimeMillis();
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.flipkart.com");
-		long endTime = System.currentTimeMillis();
-		long totalTime = endTime - startTime;
-		System.out.println("Total time: " + totalTime);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+public class PlaceOrder extends DriverClass {
 
-		// login flipkart
+	@Test(priority = 1)
+	public void logIn() {
+
 		WebElement closeLoginTap = driver.findElement(By.xpath("/html/body/div[2]/div/div/button"));
 		closeLoginTap.click();
+	}
 
-		// search kid Toys
+	@Test(priority = 2)
+	public void searchKidToys() {
+
 		WebElement toys = driver.findElement(By.name("q"));
 		toys.sendKeys("Kids Toys" + Keys.ENTER);
+	}
 
-		// click particular toys and operate other windows
+	@Test(priority = 3)
+	public void windowHandle() {
 		String oldWindow = driver.getWindowHandle();
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
 		WebElement clickToys = driver.findElement(
@@ -47,51 +41,47 @@ public class OrderPlace {
 		WebElement addToCart = driver
 				.findElement(By.xpath("//*[@id=\'container\']/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button"));
 		addToCart.click();
+	}
 
-		// change the addItems
+	@Test(priority = 4)
+	public void addItems() {
 		WebElement addItems = driver.findElement(By
 				.xpath("//*[@id=\'container\']/div/div[2]/div/div/div[1]/div/div[3]/div/div[2]/div[1]/div/button[2]"));
 		addItems.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+	}
 
+	@Test(priority = 5)
+	public void placeOrder() {
 		// click the placeOrder
 		WebElement placeOrder = driver
 				.findElement(By.xpath("//*[@id=\'container\']/div/div[2]/div/div/div[1]/div/div[4]/div/form/button"));
 		placeOrder.click();
 
+	}
+
+	@Test(priority = 6)
+	public void enterPhoneNumber() {
 		// Enter Phone Number
 		WebElement phoneNumber = driver.findElement(By.xpath(
 				"//*[@id=\'container\']/div/div[2]/div/div[1]/div[1]/div/div/div/div/div[1]/div/form/div[1]/input"));
 		phoneNumber.click();
 		phoneNumber.sendKeys("9003379476");
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+	}
 
+	@Test(priority = 7)
+	public void continueButton() {
 		// Click the continue button
 		WebElement clickContinue = driver.findElement(By.xpath(
 				"//*[@id=\'container\']/div/div[2]/div/div[1]/div[1]/div/div/div/div/div[1]/div/form/div[3]/button"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
 		clickContinue.click();
+	}
 
+	@Test(priority = 8)
+	public void backToHome() {
 		// close the current window
 		driver.close();
-		
-		Set<Cookie> demo = driver.manage().getCookies();
-		System.out.println("The size of the cookies: " + demo.size());
-
-		for (Cookie value : demo) {
-			System.out.println(value.getName() + " " + value.getValue());
-		}
 	}
-	
-
-		// chnage the control of the window(child to parent )
-		//driver.switchTo().defaultContent();
-		/*
-		 * WebElement prizeDropDown = driver.findElement(By .xpath(
-		 * "//*[@id=\'container\']/div/div[3]/div[1]/div[1]/div/div/div/section[2]/div[4]/div[3]/select"
-		 * )); prizeDropDown.click();
-		 * driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000)); Select
-		 * value = new Select(prizeDropDown); value.selectByIndex(1);
-		 */
-
-	}
+}
