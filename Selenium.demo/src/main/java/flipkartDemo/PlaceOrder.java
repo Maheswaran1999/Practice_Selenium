@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 
 public class PlaceOrder extends DriverClass {
 
-	@Test(priority = 1)
+	@Test(priority = 1, groups = { "smoke" })
 	public void logIn() {
 
 		WebElement closeLoginTap = driver.findElement(By.xpath("/html/body/div[2]/div/div/button"));
@@ -66,12 +66,12 @@ public class PlaceOrder extends DriverClass {
 		WebElement phoneNumber = driver.findElement(By.xpath(
 				"//*[@id=\'container\']/div/div[2]/div/div[1]/div[1]/div/div/div/div/div[1]/div/form/div[1]/input"));
 		phoneNumber.click();
-		phoneNumber.sendKeys("9003379476");
+		phoneNumber.sendKeys("");
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
 	}
 
 	@Test(priority = 7)
-	public void continueButton() {
+	public void continueButton()  {
 		// Click the continue button
 		WebElement clickContinue = driver.findElement(By.xpath(
 				"//*[@id=\'container\']/div/div[2]/div/div[1]/div[1]/div/div/div/div/div[1]/div/form/div[3]/button"));
@@ -79,7 +79,7 @@ public class PlaceOrder extends DriverClass {
 		clickContinue.click();
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8, groups = { "regression" })
 	public void backToHome() {
 		// close the current window
 		driver.close();

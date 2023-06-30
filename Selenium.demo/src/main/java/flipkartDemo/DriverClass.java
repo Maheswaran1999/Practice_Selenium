@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeSuite;
 
 public class DriverClass {
 
-	protected WebDriver driver;
+	protected static WebDriver driver;
 
 	@BeforeSuite
 	public void loadDriver() {

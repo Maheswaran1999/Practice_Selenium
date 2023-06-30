@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="flipkartDemo.OrderPlace">
+      <class name="flipkartDemo.PlaceOrder">
         <methods>
+          <include name="backToHome"/>
           <include name="placeOrder"/>
           <include name="enterPhoneNumber"/>
-          <include name="logIn"/>
+          <include name="windowHandle"/>
+          <include name="loadDriver"/>
+          <include name="addItems"/>
           <include name="searchKidToys"/>
           <include name="continueButton"/>
-          <include name="loadDriver"/>
-          <include name="backToHome"/>
-          <include name="windowHandle"/>
-          <include name="addItems"/>
+          <include name="logIn"/>
         </methods>
-      </class> <!-- flipkartDemo.OrderPlace -->
+      </class> <!-- flipkartDemo.PlaceOrder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
